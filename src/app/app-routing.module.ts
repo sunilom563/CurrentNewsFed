@@ -4,8 +4,8 @@ import { TopheadingComponent } from './topheading/topheading.component';
 import { TechnewsComponent } from './technews/technews.component'
 
 const routes: Routes = [
-  {path: '', component: TopheadingComponent},    
-  {path: 'tech', component: TechnewsComponent}   //home
+  {path: '', component: TopheadingComponent},     //home
+  {path: 'tech', component: TechnewsComponent}   //technews
 ];
 
 @NgModule({
