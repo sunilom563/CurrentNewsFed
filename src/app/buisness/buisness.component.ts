@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsapiservicesService } from '../service/newsapiservices.service'
 
 
 @Component({
@@ -8,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuisnessComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _services:NewsapiservicesService) { }
+
+  //buisness data
+  topbuisDisplay:any =[];
 
   ngOnInit(): void {
+
+    this._services.businessnews().subscribe((result)=>{
+      console.log(result);
+      this.topbuisDisplay = result.articles;
+    })
   }
 
 }
