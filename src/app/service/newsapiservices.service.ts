@@ -12,6 +12,8 @@ export class NewsapiservicesService {
   newsapiurl ="https://newsapi.org/v2/top-headlines?country=us&apiKey=bb8035ad4bf2485db8d28bb4b2af902e" 
 
   techApi = "  https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=bb8035ad4bf2485db8d28bb4b2af902e" 
+   
+  businessApi = "  https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=bb8035ad4bf2485db8d28bb4b2af902e" 
 
   //topheading ()
   topHeading():Observable<any>
@@ -23,6 +25,12 @@ export class NewsapiservicesService {
   {
     return this._http.get(this.techApi);
   }
+
+  businessnews():Observable<any>
+  {
+    return this._http.get(this.businessApi);
+  }
+
 
 
 }
